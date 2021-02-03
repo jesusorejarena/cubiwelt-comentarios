@@ -1,0 +1,257 @@
+
+/*
+*, *:before, *:after {
+  box-sizing: border-box;
+}*/
+
+body {
+  background: #fff9e7;
+  /*font-family: "Ubuntu", helvetica; */
+}
+
+a.este-link:link 
+{ 
+text-decoration:none; 
+} 
+a.este-link {                 /* color olvidar contraseña */
+  color: #ff00b4;
+  transition: .5s ease;
+}
+a.este-link:hover {          /* hover de olvidar contraseña */
+  color: #8400ff;  
+}
+
+.contenedor-pequeño
+{
+  width: 100%;
+  margin: auto;
+}
+
+.contenedor-formularios {
+  background: rgba(19, 35, 47, 1);
+  padding: 30px;
+  max-width: 480px;
+  margin: 20px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.contenedor-tabs {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.contenedor-tabs:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.contenedor-tabs li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 18px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: .5s ease;
+}
+.contenedor-tabs li a:hover {  /* hover de iniciar sesion y registrar */
+  background: #00d8ff;
+  color: #fff;
+}
+.contenedor-tabs .active a {
+  background: #8400ff; /* #1ab188 #5d74ff color turquesa */
+  color: #fff;
+}
+
+.contenido-tab > div:last-child {
+  display: none; 
+}
+
+h2.unico-t  {
+  text-align: center;
+  color: #fff;
+  font-weight: 200;
+  margin: 0 0 20px;
+}
+
+label {
+  position: absolute;
+  transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 16px;/*Placeholder de la casilla*/
+}
+label.req {
+  margin: 2px;
+  color: #1ab188;
+}
+
+label.active {
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 11px;/*cuando el nombre pasa abajo de la casilla*/
+}
+label.active .req {
+  opacity: 0;
+}
+
+label.highlight {
+  color: #fff;
+}
+
+div input {
+  font-size: 16px;/*Cuando se escribe dentro de la casilla*/
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #fff;
+  border-radius: 0;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+div input:focus {
+  outline: none;
+  border-color: #8400ff;
+}
+
+.contenedor-input {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+div select {
+  font-size: 16px;/*Cuando se escribe dentro de la casilla*/
+  display: block;
+  width: 100%;
+  height: 45px;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  color: #fff;
+  border-radius: 0;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+}
+
+option {   
+  background: rgba(19, 35, 47, 1);
+}
+
+div select:focus {
+  outline: none;
+  border-color: #8400ff;
+}
+
+.contenedor-select {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.fila-arriba:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.fila-arriba div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.fila-arriba div:last-child {
+  margin: 0;
+}
+
+.button {
+  border: 0;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 12px 0px 20px 0px;
+  font-size: 1.7rem;
+  background: #8400ff;
+  color: #fff;
+  transition: all .5s ease;
+  -webkit-appearance: none;
+}
+.button:hover, .button:focus {
+  background: #00d8ff;
+}
+
+.button-block {
+  display: block;
+  width: 100%;
+  height: 68px;
+}
+
+.forgot {
+  margin-top: -20px;
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  .fila-arriba div {
+    width: 100%;
+  }
+  .fila-arriba div:last-child {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .contenedor-tabs li a {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+.fondo-id
+{
+  background-color: #fef8e7;/*8400ff*/
+  margin: 0;
+  width: 100%;
+}
+
+
+
+.sombra-btn
+{
+  box-shadow: 3px 3px 6px #333333 !important;
+}
+
+
+
+.cursor
+{
+  cursor: pointer !important;
+}
+
+
+
+a:link 
+{ 
+text-decoration:none; 
+} 
+

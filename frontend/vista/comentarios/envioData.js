@@ -1,6 +1,10 @@
 function like(tipo, cod_com_vid, accion, change, usuario) {
 	let data = new FormData();
 
+	/* Aqui verifica si se esta enviando un like para 
+	para añadirle el color y verificar si existe una 
+	reaccion anterior para cambiarlo, por ejemplo de dislike a like */
+
 	if (tipo == 'Like') {
 		data.append('cod_com_vid', cod_com_vid);
 		data.append('accion', accion);
@@ -39,6 +43,10 @@ function like(tipo, cod_com_vid, accion, change, usuario) {
 				}
 			});
 	} else {
+		/* Aqui verifica si se esta enviando un like para 
+		para añadirle el color y verificar si existe una 
+		reaccion anterior para cambiarlo, por ejemplo de like a dislike */
+
 		data.append('cod_com_vid', cod_com_vid);
 		data.append('accion', accion);
 		data.append('change', change);
@@ -79,6 +87,7 @@ function like(tipo, cod_com_vid, accion, change, usuario) {
 }
 
 function borrarComentario(codigo) {
+	// Borra el comentario de la vista
 	let comentario = document.getElementById(`comentario${codigo}`);
 	comentario.remove();
 	let data = new FormData();
@@ -102,6 +111,8 @@ function borrarComentario(codigo) {
 }
 
 function borrarRespuesta(codigo) {
+	// Borra la respuesta
+
 	let respuesta = document.getElementById(`respuesta${codigo}`);
 	respuesta.remove();
 	let data = new FormData();
@@ -123,6 +134,8 @@ function borrarRespuesta(codigo) {
 			}
 		});
 }
+
+// Realiza el envio del comentario/respuesta y lo muestra en la vista, y manda la alerta si se envio correctamente
 
 let formulario = document.getElementById('formulario');
 let respuestaCaja = document.getElementById('respuestaCaja');
@@ -203,7 +216,7 @@ formulario.addEventListener('submit', function (e) {
 				</div>
 			</div>
 		`;
-/* 
+				/* 
 				const comentariosCaja = document.getElementById('comentariosCaja'); */
 				const cajonNuevo = document.getElementById('cajonNuevo');
 
